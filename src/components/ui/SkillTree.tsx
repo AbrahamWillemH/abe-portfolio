@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Lock, CheckCircle } from 'lucide-react';
+import { Lock } from 'lucide-react';
 
 export interface Skill {
   id: string;
@@ -123,9 +123,7 @@ const SkillTree: React.FC<SkillTreeProps> = ({ skills, positions }) => {
                           ) : (
                             <skill.icon className="w-12 h-12" />
                           )}
-                          {unlocked && (
-                            <CheckCircle className="absolute -top-2 -right-2 w-6 h-6 text-green-400 bg-slate-900 rounded-full" />
-                          )}
+
                           {locked && (
                             <Lock className="absolute -top-2 -right-2 w-6 h-6 text-slate-500 bg-slate-900 rounded-full p-1" />
                           )}
