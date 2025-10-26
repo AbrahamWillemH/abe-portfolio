@@ -17,7 +17,7 @@ const AnimatedButton: React.FC<AnimatedButtonProps> = ({
 }) => {
   const [isHovered, setIsHovered] = useState(false);
 
-  const baseClasses = "relative px-4 sm:px-6 py-2.5 sm:py-3 rounded-lg font-medium transition-all duration-300 overflow-hidden group text-sm sm:text-base";
+  const baseClasses = "relative px-4 sm:px-6 py-2.5 sm:py-3 rounded-lg font-medium transition-all duration-300 overflow-hidden group text-sm sm:text-base hover:cursor-pointer";
   const variantClasses = variant === 'primary'
     ? "bg-gradient-to-r from-cyan-400 to-purple-500 text-white hover:shadow-[0_0_30px_rgba(168,85,247,0.4)] hover:scale-110"
     : "border-2 border-gray-300 text-gray-300 hover:border-cyan-400 hover:text-cyan-400 hover:shadow-[0_0_20px_rgba(34,211,238,0.3)] hover:scale-110";
@@ -153,8 +153,8 @@ export default function Hero() {
             </p>
 
             <div className="flex flex-row gap-3 sm:gap-4 pt-4 items-center justify-center md:justify-start">
-              <AnimatedButton variant="primary" hoverText="Discover my skills">
-                Learn more about me
+              <AnimatedButton variant="primary" hoverText="Take a Look!">
+                Check My CV!
               </AnimatedButton>
               <AnimatedButton variant="secondary" hoverText="See my work">
                 View projects
