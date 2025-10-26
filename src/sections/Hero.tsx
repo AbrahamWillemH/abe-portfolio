@@ -123,7 +123,7 @@ export default function Hero() {
       </div>
 
       {/* Content */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 w-full relative z-10 py-20 md:py-0">
+      <div className="max-w-[1400px] mx-auto px-8 sm:px-4 w-full relative z-10 py-20 md:py-0">
         <div className="flex flex-col md:grid md:grid-cols-2 gap-8 md:gap-12 items-center">
           {/* Mobile: Lanyard First */}
           <div className="md:hidden w-full h-[300px] relative">
@@ -132,7 +132,7 @@ export default function Hero() {
 
           {/* Text Content */}
           <div className="space-y-4 sm:space-y-6 w-full">
-            <div className="space-y-2">
+            <div className="space-y-2 zen-dots-regular">
               <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-center md:text-left">
                 <span className="text-gray-200">Hi, I'm </span>
                 <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
@@ -141,13 +141,13 @@ export default function Hero() {
               </h1>
             </div>
 
-            <p className="text-base sm:text-lg text-center md:text-left text-gray-300 leading-relaxed">
+            <p className="text-base sm:text-lg text-center md:text-left text-gray-300 leading-relaxed play-regular">
               I'm a Backend and DevOps engineer passionate about building scalable and reliable systems.
               I specialize in developing APIs with Gin and NestJS, managing PostgreSQL databases,
               and integrating real-time communication with WebSockets.
             </p>
 
-            <p className="text-base sm:text-lg text-gray-300 text-center md:text-left">
+            <p className="text-base sm:text-lg text-gray-300 text-center md:text-left play-regular">
               On the DevOps side, I focus on mastering CI/CD pipelines and deploying applications with Kubernetes,
               ensuring smooth and automated software delivery from development to production.
             </p>

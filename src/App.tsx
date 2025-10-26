@@ -2,6 +2,7 @@ import './App.css'
 import Navbar from './sections/Navbar'
 import { useEffect } from 'react';
 import Hero from './sections/Hero';
+import TechStack from './sections/TechStack';
 
 export function App() {
   useEffect(() => {
@@ -12,6 +13,7 @@ export function App() {
     <div>
       <Navbar />
       <Hero />
+      <TechStack />
     </div>
   )
 }
