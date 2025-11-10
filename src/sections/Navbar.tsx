@@ -12,6 +12,7 @@ const menuItems = [
 
 export default function Navbar() {
   const [isMobile, setIsMobile] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth < 768);
@@ -22,7 +23,6 @@ export default function Navbar() {
 
   return (
     <div className="w-full">
-      {/* Desktop */}
       {!isMobile && (
         <div className="flex justify-center items-center py-4">
           <PillNav
@@ -40,9 +40,8 @@ export default function Navbar() {
         </div>
       )}
 
-      {/* Mobile overlay */}
       {isMobile && (
-        <div className="fixed top-0 left-0 w-full h-full z-50">
+        <div className={isMenuOpen ? "pointer-events-auto" : "pointer-events-none"}>
           <StaggeredMenu
             isFixed={true}
             position="right"
@@ -54,8 +53,8 @@ export default function Navbar() {
             colors={['#B19EEF', '#2e1053']}
             logoUrl={logo}
             accentColor="#665ccb"
-            onMenuOpen={() => console.log('Menu opened')}
-            onMenuClose={() => console.log('Menu closed')}
+            onMenuOpen={() => setIsMenuOpen(true)}
+            onMenuClose={() => setIsMenuOpen(false)}
           />
         </div>
       )}

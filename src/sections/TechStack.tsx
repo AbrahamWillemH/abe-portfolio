@@ -85,11 +85,11 @@ export default function TechStack() {
       <Marquee
         gradient={false}
         speed={120}
-        className="text-white font-extrabold whitespace-nowrap select-none text-[8vw] leading-none overflow-hidden quantico-bold mb-4"
+        className="text-white font-extrabold whitespace-nowrap select-none text-[17vw] md:text-[8vw] leading-none overflow-hidden quantico-bold mb-4"
       >
         TECH✷STACK✷TECH✷STACK✷TECH✷STACK✷TECH✷STACK✷
       </Marquee>
-      <div style={{ height: '32px', position: 'relative', overflow: 'hidden' }} className="mb-12">
+      <div style={{ height: '38px', position: 'relative', overflow: 'hidden' }} className="mb-12">
         <LogoLoop
           logos={techLogos}
           speed={120}

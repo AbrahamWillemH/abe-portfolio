@@ -78,7 +78,7 @@ const SkillTree: React.FC<SkillTreeProps> = ({ skills, positions }) => {
   return (
     <div className="min-h-screen p-8">
       <div className="max-w-7xl mx-auto">
-        <div className="relative w-full h-[1500px] rounded-3xl overflow-hidden">
+        <div className="relative w-full h-[900px] sm:h-[1200px] md:h-[1500px] rounded-3xl overflow-visible">
           <svg className="absolute inset-0 w-full h-full pointer-events-none">
             {renderConnections()}
           </svg>
@@ -107,21 +107,29 @@ const SkillTree: React.FC<SkillTreeProps> = ({ skills, positions }) => {
                     <div className="absolute inset-0 rounded-full bg-white blur-xl opacity-50 animate-pulse"></div>
                   )}
                   {/* Main circle */}
-                  <div className={`relative w-24 h-24 rounded-full flex items-center justify-center border-4 transition-all duration-300 ${!showContent
-                    ? 'bg-slate-950 border-slate-800 opacity-30'
-                    : unlocked
-                      ? 'bg-white border-white scale-110 shadow-lg shadow-white/50'
-                      : available
-                        ? 'bg-slate-800 border-white/60 hover:border-white hover:scale-105 shadow-md shadow-white/30'
-                        : 'bg-slate-900 border-slate-700 opacity-50'
-                    }`}>
+                  <div className={`
+                      relative 
+                      w-10 h-10 
+                      sm:w-20 sm:h-20 
+                      md:w-24 md:h-24 
+                      rounded-full flex items-center justify-center border-4 
+                      transition-all duration-300 
+                      ${!showContent
+                      ? 'bg-slate-950 border-slate-800 opacity-30'
+                      : unlocked
+                        ? 'bg-white border-white scale-110 shadow-lg shadow-white/50'
+                        : available
+                          ? 'bg-slate-800 border-white/60 hover:border-white hover:scale-105 shadow-md shadow-white/30'
+                          : 'bg-slate-900 border-slate-700 opacity-50'
+                    }
+`}>
                     <div className="text-center">
                       {showContent ? (
                         <>
                           {unlocked ? (
-                            <skill.iconNegative className="w-12 h-12" />
+                            <skill.iconNegative className="w-5 h-5 sm:w-8 sm:h-8 md:w-12 md:h-12" />
                           ) : (
-                            <skill.icon className="w-12 h-12" />
+                            <skill.icon className="w-5 h-5 sm:w-8 sm:h-8 md:w-12 md:h-12" />
                           )}
 
                           {locked && (
